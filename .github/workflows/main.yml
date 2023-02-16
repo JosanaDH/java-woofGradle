@@ -7,6 +7,6 @@ jobs:
       - uses: actions/checkout@master
       - uses: snyk/actions/setup@master
       - name: Run Snyk to check for vulnerabilities
-        run: snyk monitor -d --all-projects -- -DskipTests
+        run: snyk monitor --all-projects -- -DskipTests
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
